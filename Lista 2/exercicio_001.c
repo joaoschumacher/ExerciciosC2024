@@ -1,3 +1,9 @@
+/*
+ * Programa: exercicio_001.c
+ * Descrição: Faça um algoritmo que leia uma quantidade de tempo em minutos e escreva o tempo equivalente em segundos na tela
+ * Autor: João Pedro Schumacher
+ * 
+ */
 #include <stdio.h>
 
 int main()

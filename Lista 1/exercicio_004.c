@@ -1,3 +1,10 @@
+/*
+ * Programa: exercicio_004.c
+ * Descrição: Define por constantes 1 pergunta e 5 alternativas, escolhendo uma como correta. Dessa forma pode ser feita qualquer pergunta com 5 alternativas 
+ * Autor: João Pedro Schumacher
+ * 
+ */
+
 #include <stdio.h>
 
 int main()

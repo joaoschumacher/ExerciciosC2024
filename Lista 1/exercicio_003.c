@@ -1,3 +1,10 @@
+/*
+ * Programa: exercicio_003.c
+ * Descrição: Pergunta qual o nome verdadeiro do Batman e apresenta 5 alternativas
+ * Autor: João Pedro Schumacher
+ * 
+ */
+
 #include <stdio.h>
 
 int main()

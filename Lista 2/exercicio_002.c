@@ -1,3 +1,9 @@
+/*
+ * Programa: exercicio_002.c
+ * Descrição: Escreva um programa que leia a cotação do dólar para real, a quantidade de dólares que o turista deseja comprar, e calcule o valor total em reais que ele precisará pagar
+ * Autor: João Pedro Schumacher
+ * 
+ */
 #include <stdio.h>
 
 int main()
