@@ -12,7 +12,7 @@
 int main()
 {
     // Definição de constantes
-    float porcentagemDesconto = 15.0;
+    const float porcentagemDesconto = 15.0;
 
     // Definição das variáveis
     float valorCompra = 0.0;
@@ -23,9 +23,9 @@ int main()
     scanf("%f", &valorCompra);
 
     // Calcula o valor com desconto
-    valorCompraDesconto = valorCompra - (valorCompra * porcentagemDesconto);
+    valorCompraDesconto = valorCompra-(valorCompra*porcentagemDesconto/100);
 
     // Exibe o valor da compra com desconto
-    printf("A sua compra de %f R$, aplicando %f fica: %f R$", valorCompra, porcentagemDesconto, valorCompraDesconto);
+    printf("A sua compra de %.2f R$, aplicando %.0f%% fica: %.2f R$\n", valorCompra, porcentagemDesconto, valorCompraDesconto);
 
 }
