@@ -1,5 +1,5 @@
 /*
- * Programa: exercicio_0081.c
+ * Programa: exercicio_008.c
  * Descrição: Um usuário deseja converter a temperatura de Celsius para Fahrenheit. Escreva um programa que leia a temperatura em Celsius e exiba a temperatura equivalente em Fahrenheit.
  * Autor: João Pedro Schumacher
  * 
