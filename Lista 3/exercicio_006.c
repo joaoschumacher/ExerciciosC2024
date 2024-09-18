@@ -12,6 +12,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <ctype.h>
 
 int main()
 {
@@ -26,6 +27,9 @@ int main()
     // Pergunta para o usuário se ele quer par o ímpar
     printf("Você escolhe par ou ímpar? Par [P] / Ímpar [I] ");
     scanf("%c", &parOuImpar);
+
+    // Transforma a resposta em maiúscula
+    parOuImpar = toupper(parOuImpar);
 
     // Testa se a opção é válida
     if(parOuImpar != 'P' && parOuImpar != 'I') {
@@ -45,20 +49,20 @@ int main()
 
     // Gera número aleatório
     numeroRandom = rand() % 6;
-    printf("%i\n", numeroRandom);
+    printf("Programa escolheu: %i\n", numeroRandom);
 
     // Testa soma para ver quem ganhou
     if ((numeroEscolhido + numeroRandom) % 2 == 0) {
         if (parOuImpar == 'P') {
-            printf("Você ganhou!\n");
+            printf("\nVocê ganhou!\n\n");
         } else {
-            printf("O programa ganhou!\n");
+            printf("\n\nO programa ganhou!\n\n");
         }
     } else {
         if (parOuImpar == 'I') {
-            printf("Você ganhou!\n");
+            printf("\nVocê ganhou!\n\n");
         } else {
-            printf("O programa ganhou!\n");
+            printf("\nO programa ganhou!\n\n");
         }
     }
     
