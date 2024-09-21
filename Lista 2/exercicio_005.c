@@ -15,14 +15,14 @@ int main()
     float litros = 0.00;
 
     // Pede o preço da gasolina e quanto o motorista possui de dinheiro
-    printf("Qual o preço atual da gasolina: ");
+    printf("Qual o preco atual da gasolina: ");
     scanf("%f", &precoGasolina);    
-    printf("Quanto dinheiro o motorista tem disponível: ");
+    printf("Quanto dinheiro o motorista tem disponivel: ");
     scanf("%f", &valorMotorista);
 
     // Calcula quantidade de gasolina que o motorista pode comprar
     litros = valorMotorista / precoGasolina;
 
     // Exibe o resultado
-    printf("\nCom R$ %.2f é possível abastecer %.2f litros de gasolina.\n", valorMotorista, litros);    
+    printf("\nCom R$ %.2f e possivel abastecer %.2f litros de gasolina.\n", valorMotorista, litros);    
 }

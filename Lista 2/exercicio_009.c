@@ -9,11 +9,11 @@
 
 #include <stdio.h>
 
+// Definição de constantes
+#define PORCENTAGEM_DESCONTO 15.0
+
 int main()
 {
-    // Definição de constantes
-    const float porcentagemDesconto = 15.0;
-
     // Definição das variáveis
     float valorCompra = 0.0;
     float valorCompraDesconto = 0.0;
@@ -23,9 +23,9 @@ int main()
     scanf("%f", &valorCompra);
 
     // Calcula o valor com desconto
-    valorCompraDesconto = valorCompra-(valorCompra*porcentagemDesconto/100);
+    valorCompraDesconto = valorCompra - (valorCompra * PORCENTAGEM_DESCONTO/100);
 
     // Exibe o valor da compra com desconto
-    printf("A sua compra de %.2f R$, aplicando %.0f%% fica: %.2f R$\n", valorCompra, porcentagemDesconto, valorCompraDesconto);
+    printf("A sua compra de %.2f R$, aplicando %.0f%% fica: %.2f R$\n", valorCompra, PORCENTAGEM_DESCONTO, valorCompraDesconto);
 
 }

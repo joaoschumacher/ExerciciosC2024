@@ -14,13 +14,13 @@ int main()
     int numero = 0;
 
     // Pede número para o usuário
-    printf("Digite um número inteiro qualquer: ");
+    printf("Digite um numero inteiro qualquer: ");
     scanf("%i", &numero);
 
     // Testa se o número é par ou ímpar
     if(numero % 2 == 0) {
-        printf("O número digitado é par!\n");
+        printf("O numero digitado e par!\n");
     } else {
-        printf("O número digitado é ímpar!\n");
+        printf("O numero digitado e impar!\n");
     }
 }

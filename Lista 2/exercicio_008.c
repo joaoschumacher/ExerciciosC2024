@@ -21,5 +21,5 @@ int main()
     temperaturaF =  (temperaturaC * 9/5) + 32.0;
 
     // Exibe o resultado
-    printf("\nA temperatura %.1f °C é igual %.1f °F\n", temperaturaC, temperaturaF);
+    printf("\nA temperatura %.1f °C e igual %.1f °F\n", temperaturaC, temperaturaF);
 }

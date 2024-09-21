@@ -24,7 +24,7 @@ int main()
 
     // Testa se o segundo valor é zero
     if(segundoValor == 0) {
-        printf("Não é possível digitar zero no segundo valor porque não existe divisão por zero.\n");
+        printf("Nao e possivel digitar zero no segundo valor porque nao existe divisao por zero.\n");
         return 0;
     }
 
@@ -32,5 +32,5 @@ int main()
     resultado = primeiroValor / segundoValor;
 
     // Exibe o resultado
-    printf("O resultado da divisão é %f\n", resultado);
+    printf("O resultado da divisao e %f\n", resultado);
 }

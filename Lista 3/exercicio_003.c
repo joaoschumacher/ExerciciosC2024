@@ -15,7 +15,7 @@ int main()
     float resultado = 0.0;
 
     // Pede o número para o usuário
-    printf("Digite um número: ");
+    printf("Digite um numero: ");
     scanf("%f", &numero);
 
     // Testa se é positivo ou negativo
@@ -26,5 +26,5 @@ int main()
     }
 
     // Exibe o resultado
-    printf("O resultado é: %f\n", resultado);
+    printf("O resultado e: %f\n", resultado);
 }

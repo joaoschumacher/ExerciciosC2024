@@ -7,17 +7,17 @@
 
 #include <stdio.h>
 
+// Definição da pergunta, alternativas e resposta correta como constantes
+const char pergunta[] = "Qual e o verdadeiro nome do super-heroi Batman?";
+const char alternativaA[] = "Bruce Wayne";
+const char alternativaB[] = "Clark Kent";
+const char alternativaC[] = "Peter Parker";
+const char alternativaD[] = "Tony Stark";
+const char alternativaE[] = "Steve Rogers";
+const char respostaCorreta = 'a';
+
 int main()
 {
-    // Definição da pergunta, alternativas e resposta correta como constantes
-    const char *pergunta = "Qual é o verdadeiro1 nome do super-herói Batman?";
-    const char *alternativaA = "Bruce Wayne";
-    const char *alternativaB = "Clark Kent";
-    const char *alternativaC = "Peter Parker";
-    const char *alternativaD = "Tony Stark";
-    const char *alternativaE = "Steve Rogers";
-    const char respostaCorreta = 'a';
-
     char opcao;
 
     // Mostra a pergunta e as alternativas
@@ -34,9 +34,9 @@ int main()
 
     // Verifica se a resposta está correta
     if(opcao == respostaCorreta) {
-        printf("Você acertou!\n");
+        printf("Voce acertou!\n");
     } else {
-        printf("Você errou!\n");
+        printf("Voce errou!\n");
     }
 
     return 0;

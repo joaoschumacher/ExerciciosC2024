@@ -7,17 +7,18 @@
 
 #include <stdio.h>
 
+// Constantes
+#define MEDIA_APROVACAO 6.0
+
 int main()
 {
-    // Constantes
-    const float mediaAprovacao = 6;
     // Declaração das variáveis
     float grauA = 0.00;
     float grauB = 0.00;
     float mediaFinal = 0.00;
 
     // Pede as notas do grau A e B ao usuário
-    printf("Calculadora de média final na Unisinos\n\n");
+    printf("Calculadora de media final na Unisinos\n\n");
     printf("Digite sua nota no grau A: ");
     scanf("%f", &grauA);
     printf("Digite sua nota no grau B: ");
@@ -27,10 +28,10 @@ int main()
     mediaFinal = (grauA + 2*grauB) / 3;
 
     // Exibe resultado na tela
-    printf("\n\nSua nota é %.2f\n", mediaFinal);    
-    if(mediaFinal >= mediaAprovacao) {
-        printf("Você passou!\n");
+    printf("\n\nSua media final e %.2f\n", mediaFinal);    
+    if(mediaFinal >= MEDIA_APROVACAO) {
+        printf("Voce passou!\n");
     } else {
-        printf("Você reprovou!\n");
+        printf("Voce reprovou!\n");
     }
 }

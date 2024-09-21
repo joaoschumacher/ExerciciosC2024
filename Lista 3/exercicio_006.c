@@ -25,7 +25,7 @@ int main()
     srand(time(0));
     
     // Pergunta para o usuário se ele quer par o ímpar
-    printf("Você escolhe par ou ímpar? Par [P] / Ímpar [I] ");
+    printf("Você escolhe par ou Impar? Par [P] / Impar [I] ");
     scanf("%c", &parOuImpar);
 
     // Transforma a resposta em maiúscula
@@ -33,17 +33,17 @@ int main()
 
     // Testa se a opção é válida
     if(parOuImpar != 'P' && parOuImpar != 'I') {
-        printf("Opção inválida!\n");
+        printf("Opcao invalida!\n");
         return 0;
     }
 
     // Pede o valor de 1 a 5
-    printf("Escolha um número de 1 a 5: ");
+    printf("Escolha um numero de 1 a 5: ");
     scanf("%i", &numeroEscolhido);
 
     // Testa se a opção é válida
     if(numeroEscolhido > 5 || numeroEscolhido < 0) {
-        printf("Opção inválida!\n");
+        printf("Opcao invalida!\n");
         return 0;
     }
 
@@ -54,13 +54,13 @@ int main()
     // Testa soma para ver quem ganhou
     if ((numeroEscolhido + numeroRandom) % 2 == 0) {
         if (parOuImpar == 'P') {
-            printf("\nVocê ganhou!\n\n");
+            printf("\nVoce ganhou!\n\n");
         } else {
             printf("\n\nO programa ganhou!\n\n");
         }
     } else {
         if (parOuImpar == 'I') {
-            printf("\nVocê ganhou!\n\n");
+            printf("\nVoce ganhou!\n\n");
         } else {
             printf("\nO programa ganhou!\n\n");
         }

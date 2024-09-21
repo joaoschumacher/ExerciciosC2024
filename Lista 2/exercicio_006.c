@@ -9,7 +9,7 @@
 
 int main()
 {
-    // Declaração de constantes
+    // Declaração de variáveis
     int quantidadeTables = 0;
     int quantidadeSmartphones = 0;
     float totalVendido = 0.00;

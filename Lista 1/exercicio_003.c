@@ -13,7 +13,7 @@ int main()
     char opcao;
 
     // Faz a pergunta e mostra as alternativas
-    printf("Qual é o verdadeiro nome do super-herói Batman? \n");
+    printf("Qual e o verdadeiro nome do super-heroi Batman? \n");
     printf("a) Bruce Wayne\n");
     printf("b) Clark Kent\n");
     printf("c) Peter Parker\n");
@@ -24,8 +24,8 @@ int main()
 
     // Testa se digitou a opção correta
     if(opcao == 'a') {
-        printf("Você acertou!\n");
+        printf("Voce acertou!\n");
     } else {
-        printf("Você errou!\n");
+        printf("Voce errou!\n");
     }
 }

@@ -10,12 +10,12 @@
 
 #include <stdio.h>
 
+// Declaração de constantes
+#define DESCONTO_MAXIMO 318.20
+#define TAXA_DESCONTO 11.0
+
 int main()
 {
-    // Declaração de constantes
-    const float descontoMaximo = 318.20;
-    const float taxaDesconto = 11.0;
-    
     // Declaração de variáveis
     float salario = 0.0;
     float valorDesconto = 0.0;
@@ -25,14 +25,14 @@ int main()
     scanf("%f", &salario);
 
     // Calcula o desconto
-    valorDesconto = salario * taxaDesconto / 100;
+    valorDesconto = salario * TAXA_DESCONTO / 100;
      
     // Se o valor de desconto for maior que o máximo
-    if(valorDesconto > descontoMaximo) {
+    if(valorDesconto > DESCONTO_MAXIMO) {
     // Atribui valor máximo ao desconto
-        valorDesconto = descontoMaximo;        
+        valorDesconto = DESCONTO_MAXIMO;        
     }
 
     // Exibe resultado
-    printf("\nPara o salário de R$ %.2f o valor descontado será de R$ %.2f\n\n", salario, valorDesconto);
+    printf("\nPara o salario de R$ %.2f o valor descontado sera de R$ %.2f\n\n", salario, valorDesconto);
 }

@@ -13,13 +13,13 @@ int main()
     int numero = 0;
 
     // Pede o número para o usuário
-    printf("Digite um número: ");
+    printf("Digite um numero: ");
     scanf("%i", &numero);
 
     // Testa se o número é divisível por 3
     if (numero % 3 == 0) {
-        printf("O número digitado é divisível por 3.\n");
+        printf("O numero digitado é divisivel por 3.\n");
     } else {
-        printf("O número digitado não é divisível por 3.\n");
+        printf("O numero digitado não é divisivel por 3.\n");
     }
 }

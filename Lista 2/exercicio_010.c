@@ -6,18 +6,18 @@
  * cintos 40 reais. Some o valor da compra e ao final dê um desconto de 10 por cento sobre o
  * total. Exiba na tela o valor do desconto e o valor da compra.
  * Autor: João Pedro Schumacher
- * 
+ *
  */
 #include <stdio.h>
 
+// Definição de constantes
+#define PORCENTAGEM_DESCONTO 10.0
+#define VALOR_CAMISETA 25.0
+#define VALOR_CALCA 100.0
+#define VALOR_CINTO 40.0
+
 int main()
 {
-    // Definição de constantes
-    const float porcentagemDesconto = 10.0;
-    const float valorCamiseta = 25.0;
-    const float valorCalca = 100.0;
-    const float valorCinto = 40.0;
-
     // Definição das variáveis
     float valorCompra = 0.0;
     float valorCompraDesconto = 0.0;
@@ -28,20 +28,20 @@ int main()
     // Pede a quantidade de camisetas, calças e cintos
     printf("Digite a quantidade de camisetas: ");
     scanf("%i", &quantidadeCamisetas);
-    printf("Digite a quantidade de calças: ");
+    printf("Digite a quantidade de calcas: ");
     scanf("%i", &quantidadeCalcas);
     printf("Digite a quantidade de cintos: ");
     scanf("%i", &quantidadeCintos);
 
     // Calcula o valor total
-    valorCompra = ((quantidadeCamisetas * valorCamiseta) + (quantidadeCalcas * valorCalca) + (quantidadeCintos * valorCinto));
+    valorCompra = ((quantidadeCamisetas * VALOR_CAMISETA) + (quantidadeCalcas * VALOR_CALCA) + (quantidadeCintos * VALOR_CINTO));
     // Aplica o desconto
-    valorCompraDesconto = valorCompra - (valorCompra * porcentagemDesconto / 100);
+    valorCompraDesconto = valorCompra - (valorCompra * PORCENTAGEM_DESCONTO / 100);
 
     // Exibe os resultados
-    printf("O usuário comprou:\n");
+    printf("O usuario comprou:\n");
     printf("%i camisetas\n", quantidadeCamisetas);
-    printf("%i calças\n", quantidadeCalcas);
+    printf("%i calcas\n", quantidadeCalcas);
     printf("%i cintos\n", quantidadeCintos);
-    printf("O total da compra com %.0f%% de desconto é: %.2f R$\n", porcentagemDesconto, valorCompraDesconto);
+    printf("O total da compra com %.0f%% de desconto e: %.2f R$\n", PORCENTAGEM_DESCONTO, valorCompraDesconto);
 }

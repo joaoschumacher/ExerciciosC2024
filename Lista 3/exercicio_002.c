@@ -30,8 +30,8 @@ int main()
 
     // Exibe o resultado
     if(somaAB > somaAC) {
-        printf("A soma A + B é maior que A + C!\n");
+        printf("A soma A + B e maior que A + C!\n");
     } else {
-        printf("A soma A + B não é maior que A + C!\n");
+        printf("A soma A + B não e maior que A + C!\n");
     }
 }

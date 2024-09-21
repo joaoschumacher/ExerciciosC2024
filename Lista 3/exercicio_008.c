@@ -35,5 +35,5 @@ int main()
     }
 
     // Exibe resultado
-    printf("O valor de venda será: R$ %.2f\n\n", valorVenda);
+    printf("O valor de venda sera: R$ %.2f\n\n", valorVenda);
 }
