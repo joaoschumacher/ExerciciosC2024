@@ -24,7 +24,7 @@ int main()
     int valorNota = 0;
 
     // Pede um valor para o usuário
-    printf("Digite um valor?");
+    printf("Digite um valor? ");
     scanf("%i", &valor);
     valorAuxiliar = valor;
 
@@ -60,7 +60,7 @@ int main()
     // Calcula valor restante 
             valorAuxiliar = valorAuxiliar % valorNota;
     // Exibe a quantidade necessárias de uma nota
-            printf("%i - Notas de R$ %i\n", quantidadeNota, valorNota);
+            printf("%i nota(s) de R$ %i.\n", quantidadeNota, valorNota);
         }
     }
 
