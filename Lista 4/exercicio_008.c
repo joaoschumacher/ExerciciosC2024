@@ -17,5 +17,37 @@
 
 int main()
 {
-    
+    // Definição de variáveis
+    char resposta = 's';
+
+    // Loop de repetição do programa
+    while (resposta == 's')
+    {
+    // Definição de variáveis
+        int numero = 0;
+        int resultado = 1;
+        
+    // Aceita o número que terá o fatorial calculado
+        printf("\nEntre com um numero: ");
+        scanf("%i", &numero);
+
+        printf("O fatorial de %i e ", numero);
+    // Loop para calcular o fatorial
+        for (int i = numero; i > 0; i--)
+        {
+            resultado = i * resultado;
+            printf("%i", i);
+            if (i == 1) {
+                printf("=");
+            } else {
+                printf("x");
+            }
+        }
+        printf("%i\n\n", resultado);
+
+    // Aceita se o usuário irá calcular outro número
+        getchar();
+        printf("Calcular outro numero (s/ )? ");
+        scanf("%c", &resposta);
+    }
 }

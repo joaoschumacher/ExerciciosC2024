@@ -19,5 +19,26 @@
 
 int main()
 {
-    
+    // Declaração de variáveis
+    int linhas = 0;
+    char caractere = ' ';
+
+    // Aceita o número de linhas
+    printf("Informe o numero de linhas: ");
+    scanf("%i", &linhas);
+    getchar();
+    // Aceita o caractere que será usado
+    printf("Infome o caractere que será usado: ");
+    scanf("%c", &caractere);
+
+    // Loop para as linhas
+    for (int i = 1; i <= linhas; i++) {
+    // Loop para cada caractere de uma linha
+        for (int j = 0; j < i; j++) {
+            printf("%c", caractere);
+        }
+        printf("\n");
+        
+    }
+    printf("\n");
 }
