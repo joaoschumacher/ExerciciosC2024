@@ -10,14 +10,39 @@
  * Final do intervalo: 29
  * Números divisíveis por 3 no intervalo de 17 a 29:
  * 18 21 24 27
- * 
+ *
  * Autor: João Pedro Schumacher
- * 
+ *
  */
 
 #include <stdio.h>
 
 int main()
 {
+    // Declaração das variáveis
+    int divisor = 0;
+    int intervaloInicio = 0;
+    int intervaloFinal = 0;
+
+    // Aceita o divisor
+    printf("Entre com o valor do divisor: ");
+    scanf("%i", &divisor);
+    // Aceita o início do intervalo
+    printf("Inicio do intervalo: ");
+    scanf("%i", &intervaloInicio);
+    // Aceita o final do intervalo
+    printf("Final do intervalo: ");
+    scanf("%i", &intervaloFinal);
+
     
+    printf("Numeros divisiveis por %i no intervalo de %i a %i:\n", divisor, intervaloInicio, intervaloFinal);
+    // Monta um loop com o intervalo especificado
+    for(int i = intervaloInicio; i <= intervaloFinal; i++){
+        // Testa se o número é divisível
+        if (i % divisor == 0){
+            printf("%i ", i);
+        }
+    }
+    printf("\n");
+
 }
