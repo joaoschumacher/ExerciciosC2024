@@ -62,12 +62,13 @@ void imprimirTabuleiro(int pos1, int pos2) {
 
 int main()
 {
+    // Imprime o tabuleiro com os resultados atuais
     printf("**************************************************************\n");
     printf("*              CORRIDA DE HAMSTERS NO TABULEIRO              *\n");
     printf("**************************************************************\n");
-    printf("+--Turno 0 ---------------------------------------------------+\n");
-    imprimirTabuleiro(0, 0);
-    printf("\n");
+    imprimirTabuleiro(0,0);
+    printf("Enter para começar a corrida...");
+    getchar();
 
     // Declaração de variáveis
     int numeroSorteado1 = 0;
@@ -136,22 +137,45 @@ int main()
         if(posicaoHamster2 > 12) {
             posicaoHamster2 = 12;
         }
+        // Limpa a tela
+        #ifdef _WIN32
+        system("cls"); // Windows
+        #else
+        system("clear"); // Linux/macOS
+        #endif
+
+
         // Conta os turnos
         turnos++;
         // Imprime o tabuleiro com os resultados atuais
-        printf("+--Turno %i ---------------------------------------------------+\n", turnos);
+        printf("**************************************************************\n");
+        printf("*              CORRIDA DE HAMSTERS NO TABULEIRO              *\n");
+        printf("**************************************************************\n");
+        printf("+--Turno %3i ------------------------------------------------+\n", turnos);
         imprimirTabuleiro(posicaoHamster1, posicaoHamster2);
         // Espera o usuário querer ir para o próximo turno
         printf("Enter para ir para o proximo turno...");
         getchar();
-
     }
+
+
+
+    // Limpa a tela
+    #ifdef _WIN32
+    system("cls"); // Windows
+    #else
+    system("clear"); // Linux/macOS
+    #endif
+    // Imprime o tabuleiro com os resultados atuais
+    printf("**************************************************************\n");
+    printf("*              CORRIDA DE HAMSTERS NO TABULEIRO              *\n");
+    printf("**************************************************************\n\n");
     // Verifica o resultado da corrida
     if (posicaoHamster1 == 12 && posicaoHamster2 == 12) {
-        printf("Resultado: Empate! Ambos os hamsters chegaram ao final ao mesmo tempo!\n");
+        printf("Resultado: Empate! Ambos os hamsters chegaram ao final ao mesmo tempo!\n\n");
     } else if (posicaoHamster1 == 12) {
-        printf("Resultado: Hamster 1 venceu a corrida!\n");
+        printf("Resultado: Hamster 1 venceu a corrida!\n\n");
     } else {
-        printf("Resultado: Hamster 2 venceu a corrida!\n");
+        printf("Resultado: Hamster 2 venceu a corrida!\n\n");
     }
 }
