@@ -43,6 +43,7 @@ int main()
         if(opcaoInicio != 1) {
             break;
         }
+        // Pede os dados de entrada
         printf("Entrada de Dados:\n");
         printf("Populacao inicial de bacterias (inteiro positivo):\n");
         scanf("%i", &populacaoAtual);
@@ -51,9 +52,11 @@ int main()
         printf("Numero de ciclos (inteiro que representa quantos ciclos de crescimento serao simulados):\n");
         scanf("%i", &numeroCiclos);
 
+        // Loop para cada ciclo
         for (int ciclo = 1; ciclo <= numeroCiclos; ciclo++){
             // Sorteia um número de 1 a 100 para definir a probabilidade de ter uma condição ambiental
             probabilidadeCondicao = rand() % 100;
+            // Aplica a porcentagem de acordo com o que foi sorteado
             if(probabilidadeCondicao >= 0 && probabilidadeCondicao < 20) { // 0 a 19
                 taxaVariacao = -30;
             } else if ( probabilidadeCondicao < 35) { // 20 a 34
@@ -67,11 +70,14 @@ int main()
             } else {
                 taxaVariacao = taxaCrescimento; 
             }
+            // Calcula o tamanho da população nova
             populacaoNova = populacaoAtual + (populacaoAtual * (taxaVariacao / 100));
             populacaoAtual = populacaoNova;
             if(populacaoAtual <= 0) {
                 populacaoAtual = 0;
             }
+
+            // Exibe o resultado de cada ciclo
             printf("\nCiclo %i: Populacao = %i", ciclo, populacaoAtual);
             if(probabilidadeCondicao >= 0 && probabilidadeCondicao < 20) { // 0 a 19
                 printf(" ( Alta Temperatura , impacto de -30%% na populacao )");
@@ -88,10 +94,12 @@ int main()
                 break;
             }
         }
+
+        // Exibe mensagem quando encerra a simulação
         if (populacaoAtual != 0) {
-            printf("\nSimulação concluída. População final: %i", populacaoAtual);
+            printf("\nSimulacao concluida. Populacao final: %i", populacaoAtual);
         } else {
-            printf("\nSimulação encerrada antes do tempo. População morreu.");
+            printf("\nSimulacao encerrada antes do tempo. Populacao morreu.");
         }
     }
 }
