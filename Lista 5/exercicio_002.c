@@ -12,4 +12,19 @@
 
 int main()
 {
+    // Declaração das variáveis
+    int v[5] = {};
+    int tamV = sizeof(v) / sizeof(v[0]);
+
+    // Loop para ler os 5 valores
+    for (int i = 0; i < tamV; i++) {
+        printf("Digite o valor %i: ", i+1);
+        scanf("%i", &v[i]);
+    }
+    
+    // Loop para imprimir os 5 valores calculados
+    for (int i = 0; i < tamV; i++) {
+        printf("%i x %i = %i\n", v[i], i, v[i] * i); 
+    }
+    
 }
