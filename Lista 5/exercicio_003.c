@@ -12,4 +12,32 @@
 
 int main()
 {
+
+    // Inicializa gerador de números aleatórios
+    srand(time(0));
+
+    // Definição das variáveis
+    int jogadas = 0;
+    int valorSorteado = 0;
+    int qntValores[6] = {};
+
+    // Aceita o número de lançamentos que será feito
+    printf("Numero de lancamentos: ");
+    scanf("%i", &jogadas);
+    printf("Jogadas: ");
+
+    // Sorteia os N valores e coloca as quantidades em um vetor
+    for (int i = 0; i < jogadas; i++) {
+        valorSorteado = 1 + rand() % (6 - 1 + 1);
+        printf(" %i", valorSorteado);
+        qntValores[valorSorteado - 1]++; 
+    }
+
+    // Exibe resultados
+    printf("\n\nEstatisticas: \n");
+    for (int i = 0; i < 6; i++) {
+        printf("Face %i: %i vezes (%.2f%%)\n", i + 1, qntValores[i], (float) qntValores[i] / jogadas * 100);
+    }
+    
+    
 }
