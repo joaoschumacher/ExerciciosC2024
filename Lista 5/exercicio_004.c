@@ -13,6 +13,33 @@
 
 #include <stdio.h>
 
+const int diasSemana = 7;
+
 int main()
 {
+    // Definição de variávies
+    int passosPorDia[diasSemana] = {};
+    int somaTotal = 0;
+    float media = 0.0;
+
+    // Aceita o número de passos para cada dia
+    for (int i = 0; i < diasSemana; i++) {
+        printf("Numero de passos no dia %i: ", i + 1);
+        scanf("%i", &passosPorDia[i]);
+    }
+
+    // Loop para varrer o array
+    for (int i = 0; i < diasSemana; i++) {
+        // Soma todos os passos
+        somaTotal += passosPorDia[i];
+        // Faz a média diária
+        media = somaTotal / diasSemana;
+        // Se atingir a meta diária
+        if (passosPorDia[i] >= 10000) {
+            printf("Meta de 10.000 passos atingida no dia %i com %i passos.\n", i + 1, passosPorDia[i]);
+        }
+    }
+    // Mostra resultados
+    printf("O numero total de passos foi %i passos.\n", somaTotal);
+    printf("A media de passos diarios foi %.2f passos/dia.\n", media);
 }
