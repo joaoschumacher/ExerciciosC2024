@@ -14,6 +14,44 @@
 
 #include <stdio.h>
 
+const int diasMes = 30;
+
 int main()
 {
+    // Inicializa gerador de números aleatórios
+    srand(time(0));
+
+    // Definição das variáveis
+    int litrosDiaMes[diasMes] = {};
+    int somaLitros = 0;
+    float mediaLitros = 0.0;
+    int maiorConsumoDia = 0;
+    int maiorConsumo = 0;
+    int menorConsumoDia = 0;
+    int menorConsumo = 99999;
+
+    // Loop para passar pelos dias do mês
+    for (int i = 0; i < diasMes; i++) {
+        // Aceita (por sorteio) o consumo do dia
+        litrosDiaMes[i] = 100 + rand() % (500 - 100 + 1);
+        // Faz os cálculos
+        somaLitros += litrosDiaMes[i];
+        mediaLitros = somaLitros / diasMes;
+        // Verifica se é o maior consumo
+        if (litrosDiaMes[i] > maiorConsumo) {
+            maiorConsumo = litrosDiaMes[i];
+            maiorConsumoDia = i;
+        }
+        // Verifica se é o menor consumo
+        if (litrosDiaMes[i] < menorConsumo) {
+            menorConsumo = litrosDiaMes[i];
+            menorConsumoDia = i;
+        }
+    }
+
+    // Exibe os resultados
+    printf("\nConsumo total: %i Litros\n", somaLitros);
+    printf("Media consumo diario: %.2f Litros/Dia\n", mediaLitros);
+    printf("O dia %i foi o dia com maior consumo: %i Litros\n", maiorConsumoDia + 1, maiorConsumo);
+    printf("O dia %i foi o dia com menor consumo: %i Litros\n", menorConsumoDia + 1, menorConsumo);
 }
