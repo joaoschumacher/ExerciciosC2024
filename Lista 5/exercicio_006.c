@@ -15,7 +15,26 @@
  */
 
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+const int maxJogadores = 4;
+const int maxRodadas = 5;
 
 int main()
 {
+    int pontuacao[maxJogadores] = {};
+
+    // Inicializa gerador de números aleatórios
+    srand(time(0));
+
+    for (int i = 0; i < maxRodadas; i++) {
+        printf("RODADA %i: ", i + 1);
+        for (int j = 0; j < maxJogadores; j++) {
+            pontuacao[j] += rand() % (101);
+            printf(" %i", pontuacao[j]);
+        }
+        printf("\n");
+    }
+    
 }
