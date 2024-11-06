@@ -18,23 +18,55 @@
 #include <stdlib.h>
 #include <time.h>
 
+// Declaração de constantes
 const int maxJogadores = 4;
 const int maxRodadas = 5;
 
 int main()
 {
+    // Declaração de variáveis
     int pontuacao[maxJogadores] = {};
+    int sorteado = 0;
+    int maiorPontuacao = 0;
+    int jogadorMaiorPontuacao = 0;
 
     // Inicializa gerador de números aleatórios
     srand(time(0));
 
+    // Loop para cada rodada
     for (int i = 0; i < maxRodadas; i++) {
+        maiorPontuacao = 0;
+        jogadorMaiorPontuacao = 0;
         printf("RODADA %i: ", i + 1);
+    // Loop para cada jogador
         for (int j = 0; j < maxJogadores; j++) {
-            pontuacao[j] += rand() % (101);
-            printf(" %i", pontuacao[j]);
+            // Sorteia pontuação para cada jogador
+            sorteado = rand() % (101);
+            pontuacao[j] += sorteado;
+            // Se algum jogador sorteou maior ou igual a 80 e for a maior que a maior pontuação da rodada
+            if (sorteado >= 80 && sorteado > maiorPontuacao) {
+                maiorPontuacao = sorteado;
+                jogadorMaiorPontuacao = j;
+            }
+            printf(" |%i", pontuacao[j]);
         }
-        printf("\n");
+        // Exibe os destaques de cada rodada
+        if (maiorPontuacao <= 0) {
+           printf("| \n");
+        } else {
+           printf("| Destaque da rodada: Jogador %i -> %i pontos!\n", jogadorMaiorPontuacao+1, maiorPontuacao);
+        }
     }
+
+    jogadorMaiorPontuacao = 0;
+    maiorPontuacao = 0;
+    // Exibe resultados
+    for (int i = 0; i < maxJogadores; i++) {
+        if (pontuacao[i] > maiorPontuacao) {
+            maiorPontuacao = pontuacao[i];
+            jogadorMaiorPontuacao = i;
+        } 
+    }
+    printf("\n\nO jogador %i venceu com a soma de %i pontos!", jogadorMaiorPontuacao+1, maiorPontuacao);
     
 }
