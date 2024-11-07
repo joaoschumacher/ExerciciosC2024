@@ -21,7 +21,40 @@
 #include <stdlib.h>
 #include <time.h>
 
+// Declaração de constantes
+const int MAX_ALUNOS = 10;
+const int MAX_GRAUS = 3;
+
 int main()
 {
+    // Declaração de variáveis
+    float notas[MAX_ALUNOS][MAX_GRAUS] = {};
+
+    // Inicializa gerador de números aleatórios
+    srand(time(0));
+
+    // Loop para popular matriz de notas
+    for (int i = 0; i < MAX_ALUNOS; i++) {
+        for (int j = 0; j < MAX_GRAUS; j++) {
+            // Se for coluna de GP
+            if (j == 2) {
+                // Calcula média
+                notas[i][j] = (notas[i][0] + 2*notas[i][1]) / 3;
+            } else { // Se for coluna GA e GB
+                // Sorteia nota
+                notas[i][j] = rand() % 101 / 10.0;
+            }
+        }
+        
+    }
     
+    // Exibe resultado final
+    printf("| GA | GB | GP |\n");
+    for (int i = 0; i < MAX_ALUNOS; i++) {
+        for (int j = 0; j < MAX_GRAUS; j++) {
+            printf("| %.1f", notas[i][j]);
+        }
+        printf("|\n");
+    }
+
 }
