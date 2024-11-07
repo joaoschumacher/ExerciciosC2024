@@ -10,8 +10,6 @@
  */
 
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
 
 // Declaração de constantes
 const int TAMANHO_MATRIZ = 4;
@@ -30,7 +28,6 @@ int main()
                 matriz[i][j] = 0;
             }
         }
-        
     }
     
     // Loop para ler dados da matriz identidade
