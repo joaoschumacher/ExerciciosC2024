@@ -28,7 +28,7 @@ const int MAX_GRAUS = 3;
 int main()
 {
     // Declaração de variáveis
-    float notas[MAX_ALUNOS][MAX_GRAUS] = {};
+    float notas[MAX_ALUNOS][MAX_GRAUS];
 
     // Inicializa gerador de números aleatórios
     srand(time(0));

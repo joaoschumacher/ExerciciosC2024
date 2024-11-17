@@ -24,7 +24,7 @@ const int MAX_COLUNAS = 6;
 int main()
 {
     // Declaração de variáveis
-    int matriz[MAX_LINHAS][MAX_COLUNAS] = {};
+    int matriz[MAX_LINHAS][MAX_COLUNAS];
     int respostaA = 0;
     int respostaB = 0;
     int respostaC = 0;

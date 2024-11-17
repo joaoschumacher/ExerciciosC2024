@@ -23,7 +23,7 @@ int main()
     int vetor1[] = {1, 5, 9, 2, 5};
     int vetor2[] = {7, 4, 13, 21, 6};
     int vetor3[] = {8, -3, 5, 7, 12};
-    int matriz[VETORES][MAX_VETOR] = {};
+    int matriz[VETORES][MAX_VETOR];
 
     // Loop para popular a matriz
     for (int i = 0; i < MAX_VETOR; i++) {

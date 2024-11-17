@@ -24,7 +24,7 @@ int main()
     srand(time(0));
 
     // Definição das variáveis
-    int litrosDiaMes[diasMes] = {};
+    int litrosDiaMes[diasMes];
     int somaLitros = 0;
     float mediaLitros = 0.0;
     int maiorConsumoDia = 0;

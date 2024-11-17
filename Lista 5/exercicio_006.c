@@ -25,7 +25,7 @@ const int maxRodadas = 5;
 int main()
 {
     // Declaração de variáveis
-    int pontuacao[maxJogadores] = {};
+    int pontuacao[maxJogadores];
     int sorteado = 0;
     int maiorPontuacao = 0;
     int jogadorMaiorPontuacao = 0;

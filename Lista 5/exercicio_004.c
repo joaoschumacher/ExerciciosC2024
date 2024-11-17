@@ -18,7 +18,7 @@ const int diasSemana = 7;
 int main()
 {
     // Definição de variávies
-    int passosPorDia[diasSemana] = {};
+    int passosPorDia[diasSemana];
     int somaTotal = 0;
     float media = 0.0;
 

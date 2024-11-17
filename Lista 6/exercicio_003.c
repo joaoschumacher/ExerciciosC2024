@@ -17,7 +17,7 @@ const int TAMANHO_MATRIZ = 4;
 int main()
 {
     // Declaração de variáveis
-    int matriz[TAMANHO_MATRIZ][TAMANHO_MATRIZ] = {};
+    int matriz[TAMANHO_MATRIZ][TAMANHO_MATRIZ];
 
     // Loop para gerar a matriz
     for (int i = 0; i < TAMANHO_MATRIZ; i++) {
