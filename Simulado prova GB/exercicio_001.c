@@ -19,15 +19,19 @@
 #include <stdlib.h>
 #include <time.h>
 
+// Declaração de constantes
 const int TAMANHO_ARRAY = 10;
 
+// Função para embaralhar uma array
 void shuffle(int array[TAMANHO_ARRAY]) {
     int i = 0;
     int j = 0;
     int auxiliar = 0;
     for (int n = 0; n < TAMANHO_ARRAY; n++) {
+        // Sorteia índices que serão invertidos
         i = rand() % (TAMANHO_ARRAY);
         j = rand() % (TAMANHO_ARRAY);
+        // Troca os valores de lugar de acordo com os índices sorteados
         auxiliar = array[i];
         array[i] = array[j];
         array[j] = auxiliar;
@@ -46,6 +50,7 @@ int main()
     srand(time(0));
 
 
+    // Gera e imprime um array aleatório
     printf("Array inicial, de tamanho %i: |", TAMANHO_ARRAY);
     for (int i = 0; i < TAMANHO_ARRAY; i++) {
         sorteado = rand() % (11);
@@ -53,7 +58,10 @@ int main()
         printf(" %i |", array[i]);
     }
     
+    // Chama a função para embaralhar o array
     shuffle(array);
+
+    // Imprime o array embaralhado
     printf("\n\nArray embaralhado: |");
     for (int i = 0; i < TAMANHO_ARRAY; i++) {
         printf(" %i |", array[i]);
