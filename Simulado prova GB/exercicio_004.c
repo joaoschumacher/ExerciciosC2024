@@ -18,10 +18,45 @@
  */
 
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
+#include <string.h>
+
+const int NUMERO_LIVROS = 5;
+
+typedef struct 
+{
+    char titulo[100];
+    char autor[100];
+    int ano;
+    int paginas;
+} Livro;
+
+Livro cadastrarLivro(char titulo[], char autor[], int ano, int paginas) {
+    Livro livro;
+    strcpy(livro.titulo, titulo);
+    strcpy(livro.autor, autor);
+    livro.ano = ano;
+    livro.paginas = paginas;
+    return livro;
+}
+
+void exibeLivro(Livro livro) {
+    printf("Título: %s\n", livro.titulo);
+    printf("Autor: %s\n", livro.autor);
+    printf("Ano de Publicação: %d\n", livro.ano);
+    printf("Número de Páginas: %d\n\n", livro.paginas);
+}
 
 int main()
 {
+    Livro listaLivros[NUMERO_LIVROS];
+    // Cadastro dos 5 livros
+    listaLivros[0] = cadastrarLivro("1984", "George Orwell", 1949, 328);
+    listaLivros[1] = cadastrarLivro("Dom Quixote", "Miguel de Cervantes", 1605, 863);
+    listaLivros[2] = cadastrarLivro("Orgulho e Preconceito", "Jane Austen", 1813, 279);
+    listaLivros[3] = cadastrarLivro("O Senhor dos Anéis", "J.R.R. Tolkien", 1954, 1178);
+    listaLivros[4] = cadastrarLivro("O Pequeno Príncipe", "Antoine de Saint-Exupéry", 1943, 96);
 
+    for (int i = 0; i < 5; i++) {
+        exibeLivro(listaLivros[i]);
+    }
 }

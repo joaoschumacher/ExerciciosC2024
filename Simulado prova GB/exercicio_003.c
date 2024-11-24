@@ -19,7 +19,43 @@
 #include <stdlib.h>
 #include <time.h>
 
+const int TAMANHO_VETOR = 10;
+const int VALORES = 5;
+
+
 int main()
 {
+    // Declaração de variáveis
+    int vetor[TAMANHO_VETOR];
+    int contador[VALORES];
 
+    // Inicializa gerador de números aleatórios
+    srand(time(0));
+
+    for (int i = 0; i < VALORES; i++) {
+        contador[i] = 0;
+    }
+    
+
+    // Gera um vetor sorteando valores
+    printf("Vetor: |");
+    for (int i = 0; i < TAMANHO_VETOR; i++) {
+        vetor[i] = rand() % 5;
+        printf("%i|", vetor[i]);
+    }
+
+    for (int i = 0; i < VALORES; i++) {
+        for (int j = 0; j < TAMANHO_VETOR; j++) {
+            if (vetor[j] == i) {
+                contador[i]++;
+            }
+        }
+
+    }
+
+    // Gera um vetor sorteando valores
+    for (int i = 0; i < VALORES; i++) {
+        printf("\nQuantidade de valores %i: %i", i, contador[i]);
+    }
+    
 }
